@@ -849,14 +849,15 @@ header > * {
   top: 0;
   left: 0;
   z-index: 2;
-  background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.35);
 }
 
 #home section.cover .content > div:nth-of-type(1) {
   overflow: hidden;
 }
 
-#home section.cover .content > div:nth-of-type(1) img {
+#home section.cover .content > div:nth-of-type(1) img,
+.pokok-tokoh .card.card-type-2 div > li a:nth-of-type(1) img {
   width: auto;
   height: 100%;
   display: block;
@@ -1439,6 +1440,15 @@ section:nth-of-type(1) > .wrapper > div {
   padding-top: 5em;
 }
 
+
+#category section.layout-1 > .wrapper {
+  padding: 5em;
+}
+
+#category section h1 {
+  padding: 1em 0;
+}
+
 section.cover .content .col.w-60 {
   float: right;
 }
@@ -1512,6 +1522,10 @@ section.cover .content > .w-60 .box h3 {
   transform: translate3d(800px, 0, 0);
 }
 
+section.exclusive.investigasi > div > .content > .col:nth-of-type(1) {
+  float: right;
+}
+
 section.exclusive > div {
   height: 100%;
   padding: 2.5em 0;
@@ -1568,6 +1582,11 @@ section.exclusive .box {
   left: 20%;
 }
 
+section.investigasi .box {
+  right: 20%;
+  left: auto;
+}
+
 section.exclusive .box .wrapper {
   position: absolute;
   bottom: 1em;
@@ -1592,7 +1611,12 @@ section.exclusive .box .wrapper > p {
   margin-top: 0.25em;
 }
 
-section.layout-2 .wrapper li > h3 {
+section.layout-1 .wrapper h2 {
+  font-size: 150%;
+  line-height: 1.25em;
+}
+
+section.layout-2 .wrapper h3 {
   display: inline-block;
   font-size: 120%;
   margin-bottom: 1em;
@@ -1600,7 +1624,7 @@ section.layout-2 .wrapper li > h3 {
   position: relative;
 }
 
-section.layout-2 .wrapper li > h3:before{
+section.layout-2 .wrapper h3:before{
   content: '';
   width: 120%;
   height: 4px;
@@ -1879,6 +1903,10 @@ section.pricelist .card .wrapper {
 
 section.pricelist .card .wrapper li {
   padding: 0.5em 0;
+}
+
+.load-more {
+  text-align: center;
 }
 
 /* active */
@@ -2162,7 +2190,7 @@ footer .breadcrumb li a {
 }
 
 .card.card-type-1 li > div.col h2 {
-  height: 80px;
+  height: 90px;
   margin-bottom: 20px;
 }
 
@@ -2186,6 +2214,12 @@ footer .breadcrumb li a {
 
 .card.card-type-2 div > li a:nth-of-type(1) {
   max-height: 220px;
+  overflow: hidden;
+}
+
+.pokok-tokoh .card.card-type-2 div > li a:nth-of-type(1) {
+  position: relative;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -2435,7 +2469,7 @@ article .author p {
 /* HiDPI */
 @media screen and (min-width: 1440px){
   .card.card-type-1 li > a:nth-of-type(1) {
-    width: 25%;
+    width: 30%;
   }
 
   .card.card-type-2 div > li {
@@ -2454,6 +2488,7 @@ article .author p {
 
   section.cartoon .content > .wrapper {
     width: 50%;
+    padding: 1em;
   }
 
   section.cartoon .content > .wrapper h2 {
@@ -2462,7 +2497,7 @@ article .author p {
   }
   
   section.cartoon .content > .wrapper p {
-    font-size:  100%;
+    font-size:  80%;
     line-height: 1.6em;
   }
 }

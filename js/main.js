@@ -309,18 +309,28 @@ $(function(){
 	});
 
 
-  var laput = new Swiper('.swiper-container.laput', {
-    autoplay: true,
-    navigation: {
-      nextEl: '.swiper-button-next-laput',
-      prevEl: '.swiper-button-prev-laput',
-    },
-    pagination: {
-      el: '.swiper-pagination-laput'
-    },
-    speed: 2000,
-    loop: true
-  });
+  if($('#home').length){
+    var laput = new Swiper('.swiper-container.laput', {
+      autoplay: true,
+      navigation: {
+        nextEl: '.swiper-button-next-laput',
+        prevEl: '.swiper-button-prev-laput',
+      },
+      pagination: {
+        el: '.swiper-pagination-laput'
+      },
+      speed: 2000,
+      loop: true
+    });
+    
+    var mainPic = new Swiper('.swiper-container.main-pic', {
+      effect: 'fade',
+      speed: 2000,
+    });
+  
+    laput.controller.control = mainPic;
+    mainPic.controller.control = laput;
+  }
 
   var $animation_elements = $('.animation');
   var $window = $(window);
