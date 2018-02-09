@@ -2333,7 +2333,6 @@ article.mode-2 blockquote {
   line-height: 1em;
   padding: 1.6em 0.2em 0.2em 0.2em;
   margin: 0 3em 2em -3em;
-  text-align: center;
 }
 
 article.mode-2 blockquote.right {
@@ -2364,6 +2363,7 @@ article > .w-50 blockquote.related li a {
 }
 
 article blockquote.person > a {
+  display: block;
   width: 30%;
   margin: 0 auto;
   text-align: center;
