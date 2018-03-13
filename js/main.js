@@ -153,6 +153,149 @@ $(function(){
     });
   }
 
+  /* datepicker */
+	// var tanggalSearch = new Pikaday({
+	// 	field: document.getElementById('tanggal-search'),
+	// 	firstDay: 0,
+	// 	minDate: new Date(2011, 11, 31),
+	// 	maxDate: new Date,
+	// 	yearRange: [2000],
+	// 	container: document.getElementById('datepicker'),
+	// 	format: 'DD/MM/YYYY',
+	// 	toString(date, format) {
+	// 		// you should do formatting based on the passed format,
+	// 		// but we will just return 'D/M/YYYY' for simplicity
+	// 		var day = date.getDate();
+	// 		var month = date.getMonth() + 1;
+	// 		var year = date.getFullYear();
+
+	// 		if(day < 10){
+	// 			day = '0'+day;
+	// 		}
+	// 		if(month < 10){
+	// 			month = '0'+month;
+	// 		}
+	// 		var dmy = +year+'/'+month+'/'+day;
+	// 		// return `${day}/${month}/${year}`;
+	// 		return dmy;
+	// 	},
+	// 	parse(dateString, format) {
+	// 		// dateString is the result of `toString` method
+	// 		const parts = dateString.split('/');
+	// 		var day = parseInt(parts[0], 10);
+	// 		var month = parseInt(parts[1] - 1, 10);
+	// 		var year = parseInt(parts[1], 10);
+	// 		if(day < 10){
+	// 			day = '0'+day;
+	// 		}
+	// 		if(month < 10){
+	// 			month = '0'+month;
+	// 		}
+	// 		var dmy = +year+'/'+month+'/'+day;
+	// 		//return new Date(year, month, day);
+	// 		return dmy;
+	// 	}
+	// });
+	// var tanggalIndex = new Pikaday({
+	// 	field: document.getElementById('tanggal-index'),
+	// 	firstDay: 0,
+	// 	minDate: new Date(2011, 11, 31),
+	// 	maxDate: new Date,
+	// 	yearRange: [2000],
+	// 	container: document.getElementById('datepicker-index'),
+	// 	format: 'DD/MM/YYYY',
+	// 	toString(date, format) {
+	// 		// you should do formatting based on the passed format,
+	// 		// but we will just return 'D/M/YYYY' for simplicity
+	// 		var day = date.getDate();
+	// 		var month = date.getMonth() + 1;
+	// 		var year = date.getFullYear();
+
+	// 		if(day < 10){
+	// 			day = '0'+day;
+	// 		}
+	// 		if(month < 10){
+	// 			month = '0'+month;
+	// 		}
+	// 		var dmy = +year+'/'+month+'/'+day;
+	// 		// return `${day}/${month}/${year}`;
+	// 		return dmy;
+	// 	},
+	// 	parse(dateString, format) {
+	// 		// dateString is the result of `toString` method
+	// 		const parts = dateString.split('/');
+	// 		var day = parseInt(parts[0], 10);
+	// 		var month = parseInt(parts[1] - 1, 10);
+	// 		var year = parseInt(parts[1], 10);
+	// 		if(day < 10){
+	// 			day = '0'+day;
+	// 		}
+	// 		if(month < 10){
+	// 			month = '0'+month;
+	// 		}
+	// 		var dmy = +year+'/'+month+'/'+day;
+	// 		//return new Date(year, month, day);
+	// 		return dmy;
+	// 	}
+	// });
+
+  var inputTanggalSearch = $('#tanggal-search');
+	inputTanggalSearch.on('keyup', function(e) {
+    e.preventDefault();
+    var pilihanTanggalSearch = inputTanggalSearch.val();
+    var inputTanggalSearchResult = window.location = "https://www.tempo.co/indeks/"+pilihanTanggalSearch;
+    inputTanggalSearchResult.submit();
+	});
+
+	var inputTanggalIndex = $('#tanggal-index');
+	var pilihanTanggalIndex = inputTanggalIndex.val();
+	inputTanggalIndex.on('keyup', function(e) {
+		e.preventDefault();
+		var pilihanTanggalIndex = inputTanggalIndex.val();
+		var pilihanKanal = $('#kanal').val();
+		if(pilihanKanal == ""){
+			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex;
+		} else {
+			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
+		}
+  });
+  
+  // if(pilihanTanggalIndex == ""){
+  //   // console.log('isi tanggal');
+  //   var caution = setTimeout(function(){
+  //     var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
+
+  //     if($('.pika-single.is-hidden').length){
+  //       tooltipIndexDateEmpty.addClass('active');
+  //     }
+
+  //     tooltipIndexDateEmpty.add('a .white').on('click', function(e){
+  //       e.preventDefault();
+  //       e.stopImmediatePropagation();
+  //       tooltipIndexDateEmpty.removeClass('active');
+  //     });
+
+  //   clearTimeout(caution);
+  //   }, 0);
+
+  // } else {
+  //   window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
+  // }
+
+	var pilihanKanal = $('#kanal').val();
+	var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
+
+	var contentTooltipIndexDateEmpty = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Pilih tanggal tayang artikel.</p><div class="wrapper"><a class="white" href="#">OK</a></div></div></div>');
+	inputTanggalIndex.after(contentTooltipIndexDateEmpty);
+
+	$('#kanal').on('keyup', function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		window.location.hash = $('#kanal').val();
+		
+  });
+
+
   /* search */
   var search = $('a.search');
   var searchBox = $('.search-box');
@@ -162,151 +305,12 @@ $(function(){
     searchBox.addClass('active');
     $(document).on('click', function(e){
       if ($(e.target).closest(".search-box").length) {
-        // console.log('di dalam');
+        console.log('di dalam');
       } else {
         searchBox.removeClass('active');
       }
     });
   });
-
-  /* datepicker */
-	var tanggalSearch = new Pikaday({
-		field: document.getElementById('tanggal-search'),
-		firstDay: 0,
-		minDate: new Date(2011, 11, 31),
-		maxDate: new Date,
-		yearRange: [2000],
-		container: document.getElementById('datepicker'),
-		format: 'DD/MM/YYYY',
-		toString(date, format) {
-			// you should do formatting based on the passed format,
-			// but we will just return 'D/M/YYYY' for simplicity
-			var day = date.getDate();
-			var month = date.getMonth() + 1;
-			var year = date.getFullYear();
-
-			if(day < 10){
-				day = '0'+day;
-			}
-			if(month < 10){
-				month = '0'+month;
-			}
-			var dmy = +year+'/'+month+'/'+day;
-			// return `${day}/${month}/${year}`;
-			return dmy;
-		},
-		parse(dateString, format) {
-			// dateString is the result of `toString` method
-			const parts = dateString.split('/');
-			var day = parseInt(parts[0], 10);
-			var month = parseInt(parts[1] - 1, 10);
-			var year = parseInt(parts[1], 10);
-			if(day < 10){
-				day = '0'+day;
-			}
-			if(month < 10){
-				month = '0'+month;
-			}
-			var dmy = +year+'/'+month+'/'+day;
-			//return new Date(year, month, day);
-			return dmy;
-		}
-	});
-	var tanggalIndex = new Pikaday({
-		field: document.getElementById('tanggal-index'),
-		firstDay: 0,
-		minDate: new Date(2011, 11, 31),
-		maxDate: new Date,
-		yearRange: [2000],
-		container: document.getElementById('datepicker-index'),
-		format: 'DD/MM/YYYY',
-		toString(date, format) {
-			// you should do formatting based on the passed format,
-			// but we will just return 'D/M/YYYY' for simplicity
-			var day = date.getDate();
-			var month = date.getMonth() + 1;
-			var year = date.getFullYear();
-
-			if(day < 10){
-				day = '0'+day;
-			}
-			if(month < 10){
-				month = '0'+month;
-			}
-			var dmy = +year+'/'+month+'/'+day;
-			// return `${day}/${month}/${year}`;
-			return dmy;
-		},
-		parse(dateString, format) {
-			// dateString is the result of `toString` method
-			const parts = dateString.split('/');
-			var day = parseInt(parts[0], 10);
-			var month = parseInt(parts[1] - 1, 10);
-			var year = parseInt(parts[1], 10);
-			if(day < 10){
-				day = '0'+day;
-			}
-			if(month < 10){
-				month = '0'+month;
-			}
-			var dmy = +year+'/'+month+'/'+day;
-			//return new Date(year, month, day);
-			return dmy;
-		}
-	});
-
-	var inputTanggalSearch = $('#tanggal-search');
-	inputTanggalSearch.on('change', function(e) {
-		e.preventDefault();
-		var pilihanTanggalSearch = inputTanggalSearch.val();
-		window.location = "https://www.tempo.co/indeks/"+pilihanTanggalSearch;
-	});
-
-	var inputTanggalIndex = $('#tanggal-index');
-	var pilihanTanggalIndex = inputTanggalIndex.val();
-	inputTanggalIndex.on('change', function(e) {
-		e.preventDefault();
-		var pilihanTanggalIndex = inputTanggalIndex.val();
-		var pilihanKanal = $('#kanal').val();
-		if(pilihanKanal == ""){
-			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex;
-		} else {
-			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
-		}
-	});
-
-	var pilihanKanal = $('#kanal').val();
-	var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
-
-	var contentTooltipIndexDateEmpty = $('<div class="tooltip red-500"><div class="wrapper"><div class="arrow-up"></div><p>Pilih tanggal tayang artikel.</p><div class="wrapper"><a class="white" href="#">OK</a></div></div></div>');
-	inputTanggalIndex.after(contentTooltipIndexDateEmpty);
-
-	$('#kanal').on('change', function(e){
-		e.preventDefault();
-		e.stopImmediatePropagation();
-		window.location.hash = $('#kanal').val();
-		if(pilihanTanggalIndex == ""){
-			// console.log('isi tanggal');
-			var caution = setTimeout(function(){
-				var tooltipIndexDateEmpty = inputTanggalIndex.add('.tooltip');
-
-				if($('.pika-single.is-hidden').length){
-					tooltipIndexDateEmpty.addClass('active');
-				}
-
-				tooltipIndexDateEmpty.add('a .white').on('click', function(e){
-					e.preventDefault();
-					e.stopImmediatePropagation();
-					tooltipIndexDateEmpty.removeClass('active');
-				});
-
-			clearTimeout(caution);
-			}, 0);
-
-		} else {
-			window.location = "https://www.tempo.co/indeks/"+pilihanTanggalIndex+"/"+pilihanKanal;
-		}
-	});
 
 
   if($('#home').length){
@@ -363,4 +367,19 @@ $(function(){
     console.log('ada');
     $('.gallery').addClass('active');
   }
+
+  var formBerlangganan = $('footer input.email');
+  formBerlangganan.val('Masukkan email Anda');
+  formBerlangganan.on('focus', function() {
+    console.log('focus');
+    if($(this).val() === 'Masukkan email Anda'){
+      $(this).val('');
+    }
+  });
+  formBerlangganan.on('blur', function() {
+    console.log('blur');
+    if($(this).val() === ''){
+			$(this).val('Masukkan email Anda');
+		}
+  });
 });
