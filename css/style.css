@@ -2757,7 +2757,7 @@ article .author p {
 
   .card.card-type-2 div > li h2,
   .card.card-type-3 div > li h2 {
-    height: 'auto';
+    height: auto;
     padding-bottom: 5px; /* give breath font */
   }
 

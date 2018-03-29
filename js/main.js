@@ -240,7 +240,7 @@ $(function(){
 	// });
 
   var inputTanggalSearch = $('#tanggal-search');
-	inputTanggalSearch.on('keyup', function(e) {
+	inputTanggalSearch.on('change', function(e) {
     e.preventDefault();
     var pilihanTanggalSearch = inputTanggalSearch.val();
     var inputTanggalSearchResult = window.location = "https://www.tempo.co/indeks/"+pilihanTanggalSearch;
@@ -249,7 +249,7 @@ $(function(){
 
 	var inputTanggalIndex = $('#tanggal-index');
 	var pilihanTanggalIndex = inputTanggalIndex.val();
-	inputTanggalIndex.on('keyup', function(e) {
+	inputTanggalIndex.on('change', function(e) {
 		e.preventDefault();
 		var pilihanTanggalIndex = inputTanggalIndex.val();
 		var pilihanKanal = $('#kanal').val();

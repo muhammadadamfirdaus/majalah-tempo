@@ -1,7 +1,9 @@
+
 <!doctype html>
 <html lang="en">
+<!-- header -->
 <head>
-<title>Prototype - Majalah</title>
+<title>Majalah Tempo</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="original-source" href="https://investigasi.tempo.co/papua" />
@@ -27,593 +29,549 @@
 <meta name="twitter:image" content="https://cdn.tmpo.co/papua/cover-1.jpg" />
 <meta name="twitter:creator" content="@tempodotco" />
 <link rel="shortcut icon" href="https://cdn.tmpo.co/favicon/tempo-white.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="http://majalah.tempointeraktif.co/assets/majalah/css/style.css">
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="css/ie7-lower.css">
 <![endif]-->
 </head>
+
 <body>
 <div id="home" class="container">
+
+  <!-- navbar -->
   <header class="clearfix">
-    <div class="col w-50">
-      <a href="https://majalah.tempo.co">
-        <img src="images/logo-tempo.png" alt="logo majalah TEMPO, TEMPO official logo">
-      </a>
-      <ul class="social">
-        <li><a class="facebook" href="#" target="blank"></a></li>
-        <li><a class="twitter" href="#" target="blank"></a></li>
-        <li><a class="youtube" href="#" target="blank"></a></li>
-      </ul>
-    </div>
-    <div class="col w-50">
-      <nav class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Galeri</a></li>
-        <li><a href="#">Berlangganan</a></li>
-      </nav>
-      <a class="search" href="#">
-      </a>
-      <div class="search-box">
-        <div class="w-50">
-          <img src="images/search.jpg" alt="Majalah TEMPO">
-        </div>
-        <div class="wrapper clearfix">
-          <div class="col w-50 search-edisi clearfix">
-            <h2>
-              Cari Majalah Edisi:
-            </h2>
-            <div id="datepicker">
-              <div class="wrapper">
-                <input type="date" id="tanggal-search">
+  <div class="col w-50">
+    <a href="https://majalah.tempo.co">
+      <img src="http://majalah.tempointeraktif.co/assets/majalah/images/logo-tempo.png" alt="logo majalah TEMPO, TEMPO official logo">
+    </a>
+    <ul class="social">
+      <li><a class="facebook" href="https://id-id.facebook.com/TempoMedia/" target="blank"></a></li>
+      <li><a class="twitter" href="https://twitter.com/tempodotco" target="blank"></a></li>
+      <li><a class="youtube" href="https://www.youtube.com/channel/UC3QRoNY-nYDTNSv-1dR0P-g" target="blank"></a></li>
+    </ul>
+  </div>
+  <div class="col w-50">
+    <nav class="menu">
+      <li><a href="http://majalah.tempointeraktif.co/">Home</a></li>
+      <li><a href="http://majalah.tempointeraktif.co/gallery">Galeri</a></li>
+      <li><a href="http://majalah.tempointeraktif.co/price">Berlangganan</a></li>
+    </nav>
+    <a class="search" href="#">
+    </a>
+    <div class="search-box">
+      <div class="w-50">
+        <img src="http://majalah.tempointeraktif.co/assets/majalah/images/search.jpg" alt="Majalah TEMPO">
+      </div>
+      <div class="wrapper clearfix">
+        <div class="col w-50 search-edisi clearfix">
+          <h2>
+            Cari Majalah Edisi:
+          </h2>
+            <form action="http://majalah.tempointeraktif.co/search" method="get">
+              <div id="datepicker">
+                <div class="wrapper">
+                      <!-- <input type="date" id="tanggal-search" value="2018-03-25"> -->
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col w-50 search-keyword clearfix">
-            <h2>atau masukkan kata kunci pencarian</h2>
-            <form action="#" method="post">
-              <input type="text" placeholder="ketik keyword"/>
+              <input type="month" name="date" value="2018-03">
+
               <input type="submit" value="Cari"/>
             </form>
-          </div>
         </div>
-        <p class="w-100">
-          TEMPO Media Group - Copyright &copy; 2018. Hak cipta dilindungi undang-undang.
-        </p>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="cover">
-      <div class="wrapper">
-        <div class="content clearfix">
-          <div class="col w-60 swiper-container main-pic">
-            <!-- <img src="images/article.jpg">
-            <div class="box">
-              <div class="wrapper">
-                <h2>
-                  Novel Baswedan
-                </h2>
-                <h3>
-                  Banyak Orang Terlibat dalam Kasus Saya
-                </h3>
-              </div>
-            </div> -->
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/article.jpg">
-                <div class="box">
-                  <div class="wrapper">
-                    <h2>
-                      Novel Baswedan
-                    </h2>
-                    <h3>
-                      Banyak Orang Terlibat dalam Kasus Saya
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/wawancara.jpg">
-                <div class="box">
-                  <div class="wrapper">
-                    <h2>
-                      Novel Baswedan
-                    </h2>
-                    <h3>
-                      Banyak Orang Terlibat dalam Kasus Saya
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col w-40">
-            <div class="main-cover">
-              <div class="wrapper">
-                <div class="front">
-                  <img src="images/cover.jpg" alt="Cover Edisi Senin 2018">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-container laput">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="#">
-                    <h2>
-                      Lelaki Gempal di Rumah Novel
-                    </h2>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#">
-                    <h2>
-                      Lelaki Gempal di Rumah Novel, Ya Kali
-                    </h2>
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-pagination swiper-pagination-laput"></div>
-              <div class="swiper-button-next swiper-button-next-laput"></div>
-              <div class="swiper-button-prev swiper-button-prev-laput"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="layout-1">
-      <div class="wrapper clearfix">
-        <div class="col w-70 card card-type-1">
-          <li class="clearfix">
-            <a class="col w-40" href="">
-              <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-            </a>
-            <div class="col w-60">
-              <a class="col" href="">
-                <h2>
-                  <span>Keyword</span>
-                  Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p class="col">
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </div>
-          </li>
-          <li class="clearfix">
-            <a class="col w-40" href="">
-              <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-            </a>
-            <div class="col w-60">
-              <a class="col" href="">
-                <h2>
-                  <span>Keyword</span>
-                  Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p class="col">
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </div>
-          </li>
-          <li class="clearfix">
-            <a class="col w-40" href="">
-              <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-            </a>
-            <div class="col w-60">
-              <a class="col" href="">
-                <h2>
-                  <span>Keyword</span>
-                  Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p class="col">
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </div>
-          </li>
-          <li class="clearfix">
-            <a class="col w-40" href="">
-              <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-            </a>
-            <div class="col w-60">
-              <a class="col" href="">
-                <h2>
-                  <span>Keyword</span>
-                  Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p class="col">
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </div>
-          </li>
-        </div>
-        <div class="col w-30">
-          <div class="ads">
-            <!-- begin ads -->
-            <a href="#">
-              <img src="images/banner-rolex.jpg">
-            </a>
-            <!-- end ads -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="background-f5 exclusive clearfix">
-      <div class="wrapper">
-        <div class="content clearfix">
-          <div class="col w-50">
-            <h2>Wawancara</h2>
-            <div class="box">
-              <div class="wrapper">
-                <h3>Wawancara</h3>
-                <p>
-                  Novel Baswedan
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col w-50">
-            <a href="">
-              <img src="images/wawancara.jpg">
-            </a>
-            <div class="wrapper">
-              <h2>
-                Setelah kejadian ini, bakal mau dikawal?
-              </h2>
-              <p>
-                <i>Wallahualam</i>, kita lihat nanti. Intinya, saya enggak takut.
-              </p>
-              <p>
-                <a class="button default" href="#">
-                  <span>Selengkapnya</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="layout-2">
-      <div class="wrapper">
-        <div class="card card-type-2 clearfix">
-          <div class="col w-33">
-            <li class="clearfix">
-              <h3>
-                Sport
-              </h3>
-              <a href="">
-                <img src="images/1.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-          <div class="col w-33">
-            <li class="clearfix">
-              <h3>
-                Seni
-              </h3>
-              <a href="">
-                <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-          <div class="col w-33">
-            <li class="clearfix">
-              <h3>
-                Film
-              </h3>
-              <a href="">
-                <img src="images/3.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-        </div>
-        <div class="card card-type-2 clearfix">
-            <div class="col w-33">
-              <li class="clearfix">
-                <h3>
-                  Sains
-                </h3>
-                <a href="">
-                  <img src="images/1.jpg" alt="isi dengan thumbnail image artikelnya">
-                </a>
-                <a href="">
-                  <h2>
-                    <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2>
-                </a>
-                <p>
-                  Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-                </p>
-              </li>
-            </div>
-            <div class="col w-33">
-              <li class="clearfix">
-                <h3>
-                  Kesehatan
-                </h3>
-                <a href="">
-                  <img src="images/2.jpg" alt="isi dengan thumbnail image artikelnya">
-                </a>
-                <a href="">
-                  <h2>
-                    <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2>
-                </a>
-                <p>
-                  Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-                </p>
-              </li>
-            </div>
-            <div class="col w-33">
-              <li class="clearfix">
-                <h3>
-                  Dunia
-                </h3>
-                <a href="">
-                  <img src="images/3.jpg" alt="isi dengan thumbnail image artikelnya">
-                </a>
-                <a href="">
-                  <h2>
-                    <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </h2>
-                </a>
-                <p>
-                  Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-                </p>
-              </li>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section class="background-f5 exclusive investigasi clearfix">
-      <div class="wrapper">
-        <div class="content clearfix">
-          <div class="col w-50">
-            <h2>Investigasi</h2>
-            <div class="box">
-              <div class="wrapper">
-                <p>
-                  Judul Investigasi Menguak Misteri Laut Hitam
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col w-50">
-            <a href="">
-              <img src="images/wawancara.jpg">
-            </a>
-            <div class="wrapper">
-              <h2>
-                Setelah kejadian ini, bakal mau dikawal?
-              </h2>
-              <p>
-                <i>Wallahualam</i>, kita lihat nanti. Intinya, saya enggak takut.
-              </p>
-              <p>
-                <a class="button default" href="#">
-                  <span>Selengkapnya</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="layout-2 pokok-tokoh">
-      <div class="wrapper">
-        <h3>
-          Pokok Tokoh
-        </h3>
-        <div class="card card-type-3 clearfix">
-          <div class="col w-33">
-            <li class="clearfix">
-              <a href="">
-                <img src="images/ahmad-albar.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-          <div class="col w-33">
-            <li class="clearfix">
-              <a href="">
-                <img src="images/ahmad-albar.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-          <div class="col w-33">
-            <li class="clearfix">
-              <a href="">
-                <img src="images/ahmad-albar.jpg" alt="isi dengan thumbnail image artikelnya">
-              </a>
-              <a href="">
-                <h2>
-                  <span>Keyword</span>Jejak Berdarah Klan Maute Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
-              </a>
-              <p>
-                Belasan orang menjejali masjid mungil di Barangay Gacap di Piagapo, Filipina selatan. Ahad sore dua pekan lalu, hujan deras mengguyur masjid berdinding batako dan bambu serta berlantai semen itu. Di atap bangunan seluas lapangan bulu tangkis tersebut, sebuah pengeras suara putih menyembul. Masjid ini tidak boleh diberi nama kata Kepala Barangay Gacap, Saiben M. Abubacar, saat ditemui Tempo. “Jika ada nama, tetua adat akan marah.
-              </p>
-            </li>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="cartoon">
-      <div class="wrapper">
-        <div class="content clearfix">
-          <a href="">
-            <img src="images/kartun.jpg">
-          </a>
-          <div class="wrapper">
-            <h2>
-                Tentara dan Pemberantasan Terorisme
-            </h2>
-            <p>
-              Dewan Perwakilan Rakyat tengah membahas revisi Undang-Undang tentang Tindak Pidana Terorisme. Selama pembahasan di tingkat panitia khusus, muncul ide untuk melibatkan Tentara Nasional Indonesia dalam memberangus gerakan teror. Tapi konsep ini menuai perbedaan pendapat.
-            </p>
-            <p>
-              Selama satu dekade lebih, pemberantasan terorisme diserahkan kepada Kepolisian RI dengan membentuk Detasemen Khusus 88 Antiteror. Jauh sebelum Densus 88 lahir, TNI sudah memiliki tim penggebuk teroris yang disebut Detasemen 81. Peran ini yang ditengarai hendak…
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="animation exclusive wawancara clearfix">
-      <div class="col w-50">
-        <div class="wrapper">
-          <div class="top-left">
-          </div>
-          <div class="w-60">
-            <div class="wrapper">
-              <h2>
-                Ogah-ogahan Melacak Penyerang Novel
-              </h2>
-              <p>
-                Delapan jam melacak jejak Mochamad Basuki, tim Komisi Pemberantasan Korupsi akhirnya mencokok Ketua Komisi B Dewan Perwakilan Rakyat Daerah Jawa Timur ini. "Dia ditangkap di sekitar Malang," kata Wakil Ketua KPK Basaria Panjaitan, Selasa pekan lalu.
-              </p>
-              <p>
-                Komisi antikorupsi memburu Basuki karena ia diduga menyuruh dua ajudannya, Rahman Agung dan Santoso, menerima uang suap. Senin siang pekan lalu, tim KPK menangkap tangan kedua orang itu ketika menerima uang Rp 150 juta
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col w-50">
-        <div class="wrapper">
-          <img src="images/novel-baswedan.jpg" alt="Isi dengan nama Caption">
-        </div>
-      </div>
-    </section>
-    <section class="animation tempo-buy">
-      <div class="wrapper">
-        <div class="content">
-          <div class="box w-50">
-            <div class="wrapper">
-              <h3>Edisi Senin, 12 Juni 2017</h3>
-              <h1>Mencari Penyerang Novel Baswedan</h1>
-              <a href="" class="button default">
-                <span>Berlangganan</span>
-              </a>
-              <p>Dapatkan diskon 45% di setiap pembelian paket berlangganan TEMPO.</p>
-              <ul class="payment-method">
-                <li><a class="mastercard" href=""></a></li>
-                <li><a class="visa" href=""></a></li>
-                <li><a class="atm-bersama" href=""></a></li>
-                <li><a class="bca-klikpay" href=""></a></li>
-                <li><a class="mandiri-clickpay" href=""></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="box w-50">
-            <div class="wrapper">
-              <a href="#">
-                <img src="images/24.jpg" alt="Isi dengan edisi majalah">
-              </a>
-              <a href="#">
-                <img src="images/27.jpg" alt="Isi dengan edisi majalah">
-              </a>
-              <a href="#">
-                <img src="images/26.jpg" alt="Isi dengan edisi majalah">
-              </a>
-              <a href="#">
-                <img src="images/25.jpg" alt="Isi dengan edisi majalah">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="wrapper">
-      <div class="row clearfix">
-        <div class="col w-50">
-          <h2>Berlangganan Majalah</h2>
+        <div class="col w-50 search-keyword clearfix">
+          <h2>atau masukkan kata kunci pencarian</h2>
           <form action="#" method="post">
-            <input type="text" class="email" />
-            <input type="submit" value="Send"/>
+            <input type="text" placeholder="ketik keyword"/>
+            <input type="submit" value="Cari"/>
           </form>
-          <p>
-            Dapatkan diskon khusus dengan berlangganan majalah TEMPO selama 3 bulan.
-          </p>
-          <ul class="social">
-            <li><a class="facebook" href="#" target="blank"></a></li>
-            <li><a class="twitter" href="#" target="blank"></a></li>
-            <li><a class="youtube" href="#" target="blank"></a></li>
-          </ul>
-        </div>
-        <div class="col w-50">
-          <h2>Galeri Majalah</h2>
-          <ul class="galeri-majalah">
-            <li><a href="#" target="blank"><img src="images/24.jpg"></a></li>
-            <li><a href="#" target="blank"><img src="images/25.jpg"></a></li>
-            <li><a href="#" target="blank"><img src="images/26.jpg"></a></li>
-            <li><a href="#" target="blank"><img src="images/27.jpg"></a></li>
-          </ul>
         </div>
       </div>
-      <div class="row clearfix">
-        <div class="col w-50">
-          <p>Copyright &copy; 2017 PT Tempo Inti Media tbk</p>
-        </div>
-        <div class="col w-50">
-          <ul class="breadcrumb">
-            <li><a href="#" target="blank">Tentang Kami</a></li>
-            <li><a href="#" target="blank">Kode Etik</a></li>
-            <li><a href="#" target="blank">Karir</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="arrow">
-        <div class="wrapper">
-            <a href="#"></a>
-        </div>
+      <p class="w-100">
+        TEMPO Media Group - Copyright &copy; 2018. Hak cipta dilindungi undang-undang.
+      </p>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+    <!-- Main Cover -->
+            <section class="cover">
+          <div class="wrapper">
+            <div class="content clearfix">
+              <div class="col w-60 swiper-container main-pic">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg">
+                    <div class="box">
+                      <div class="wrapper">
+                        <h2>
+                          Novel Baswedan
+                        </h2>
+                        <h3>
+                          Banyak Orang Terlibat dalam Kasus Saya
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="http://images.tempointeraktif.co/mbm/foto/11142/96_97_poktok_0347_2.jpg">
+                    <div class="box">
+                      <div class="wrapper">
+                        <h2>
+                          Novel Baswedan
+                        </h2>
+                        <h3>
+                          Banyak Orang Terlibat dalam Kasus Saya
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col w-40">
+                <div class="main-cover">
+                  <div class="wrapper">
+                    <div class="front">
+                      <img src="http://images.tempointeraktif.co/mbm/cover/999/cover_0347.jpg" alt="Cover Edisi Senin 2018">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-container laput">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
+                        <h2>
+                          Alexander Rusli: Tinggalkan Grup Keluarga                        </h2>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
+                        <h2>
+                            Rival Himran: Sekamar dengan Mantan Teroris                        </h2>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination swiper-pagination-laput"></div>
+                  <div class="swiper-button-next swiper-button-next-laput"></div>
+                  <div class="swiper-button-prev swiper-button-prev-laput"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+    <!-- Section Artikel lainnya -->
+    <section class="layout-1">
+  <div class="wrapper clearfix">
+    <div class="col w-70 card card-type-1">
+                <li class="clearfix">
+          <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155098/adonis">
+            <img src="http://images.tempointeraktif.co/all/nophoto.jpg" alt="Adonis">
+          </a>
+          <div class="col w-60">
+            <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155098/adonis">
+              <h2>
+                <span>Yusuf Kalla</span>
+                Adonis              </h2>
+            </a>
+            <p class="col">
+                Malam itu Adonis duduk di Acropole, restoran Yunani di Rue de lâÃcole-de-MÃ©decine, Paris. Sastrawan yang diunggulkan jadi penerima Hadiah Nobel ini, yang menggugah sastra Arab sejak 70 tahun yang lalu, menyambut tamunya dengan sebotol anggur organik. Sikapnya tak berjarak, dan ia bisa kocak. Bersamanya kita akan lupa ia pak tua 88 tahun yang telah menempuh sejarah Timur Tengah yang ganas-bersama puisi yang terpaut tegang dengan zamannya.
+Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Concerto al-Quds, yang versi Arabnya terbit pada 2012. "Ini buku saya yang paling akhir," katanya.            </p>
+          </div>
+      </li>
+                <li class="clearfix">
+          <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga">
+          </a>
+          <div class="col w-60">
+            <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
+              <h2>
+                <span>Yusuf Kalla</span>
+                Alexander Rusli: Tinggalkan Grup Keluarga              </h2>
+            </a>
+            <p class="col">
+                PEMILIHAN Gubernur DKI Jakarta sempat membawa keretakan dalam keluarga Alexander Rusli, mantan Direktur Utama PT Indosat Tbk. Pada akhir 2016 dan awal 2017, grup WhatsApp keluarganyaterdiri atas ayah, ibu, adik, ipar, dan dua pamannyadibanjiri hoaks dan konten negatif. Grup itu, Alex melanjutkan, sangat aktif. Ada saja hal yang dibahas anggotanya saban hari. Capek menjelaskan isu satu per satu, Alex memilih meninggalkan grup.            </p>
+          </div>
+      </li>
+                <li class="clearfix">
+          <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11142/96_97_poktok_0347_2.jpg" alt="Rival Himran: Sekamar dengan Mantan Teroris">
+          </a>
+          <div class="col w-60">
+            <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
+              <h2>
+                <span>Yusuf Kalla</span>
+                Rival Himran: Sekamar dengan Mantan Teroris              </h2>
+            </a>
+            <p class="col">
+                Rival Himran, 36 tahun, tak pernah membayangkan bakal satu kamar dengan mantan teroris. Saat didapuk menjadi figuran sekaligus pencipta lagu tema film Jalan Pulang, pembetot bas grup musik Steven & Coconut Treez ini harus menjalani syuting di Poso, Sulawesi Tengah. Awalnya, ia tak tahu sutradara filmnya adalah mantan narapidana terorisme di Poso, Arifuddin Lako. "Dalam perjalanan saya baru diberi tahu dan selama syuting harus menginap di rumahnya," ujarnya saat dihubungi pada Jumat dua pekan lalu.            </p>
+          </div>
+      </li>
+                <li class="clearfix">
+          <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11143/96_97_poktok_0347_1.jpg" alt="Rosa Rai Djalal: Pulang Tengah Malam">
+          </a>
+          <div class="col w-60">
+            <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
+              <h2>
+                <span>Yusuf Kalla</span>
+                Rosa Rai Djalal: Pulang Tengah Malam              </h2>
+            </a>
+            <p class="col">
+                Rosa Rai Djalal, 43 tahun, harus membayar mahal keputusannya terjun sebagai produser film, yaitu pulang tengah malam. Setelah menjadi produser eksekutif di tiga film, dia nyemplung lebih dalam menjadi produser Guru Ngaji karya sutradara Erwin Arnada, yang tayang bulan ini.            </p>
+          </div>
+      </li>
+                <li class="clearfix">
+          <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11140/92_95_wwc_0347.jpg" alt="Menteri Kelautan dan Perikanan Susi Pudjiastuti: Im Alone">
+          </a>
+          <div class="col w-60">
+            <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
+              <h2>
+                <span>Yusuf Kalla</span>
+                Menteri Kelautan dan Perikanan Susi Pudjiastuti: Im Alone              </h2>
+            </a>
+            <p class="col">
+                BULAN-bulan terakhir merupakan masa berat bagi Menteri Kelautan dan Perikanan Susi Pudjiastuti. Kebijakan-kebijakannya dihujani kritik. Januari lalu, Wakil Presiden Jusuf Kalla dan Menteri Koordinator Kemaritiman Luhut Binsar Pandjaitan, yang tidak lain adalah atasannya, memintanya menyudahi pengeboman kapal pencuri ikan dan berfokus pada peningkatan produksi perikanan. Yang terbaru, Fadli Zon, Wakil Ketua Dewan Perwakilan Rakyat dari partai oposisi, Gerindra, menyebutkan kehidupan nelayan makin susah akibat larangan cantrang.
+Sejak dilantik Presiden Joko Widodo pada 2014, Susi menerapkan terapi kejut dengan menenggelamkan kapal pencuri ikan. Dari ribuan yang ditangkap, 363 kapal berakhir di dasar laut. Susi mengatakan lebih dari 7.000 kapal asing penangkap ikan ngacir dari perairan Indonesia. Adapun cantrang-jaring ribuan meter yang menyentuh dasar perairan-dilarang lewat Peraturan Menteri Nomor 2 Tahun 2015 tentang Larangan Penggunaan Pukat Hela dan Pukat Tarik. Januari lalu, Jokowi memperpanjang izin penggunaannya setelah menerima perwakilan demonstran pro-cantrang di Jakarta.            </p>
+          </div>
+      </li>
+            </div>
+    <div class="col w-30">
+      <div class="ads">
+        <!-- begin ads -->
+        <a href="#">
+          <img src="http://majalah.tempointeraktif.co/assets/majalah/images/banner-rolex.jpg">
+        </a>
+        <!-- end ads -->
       </div>
     </div>
-  </footer>
+  </div>
+</section>
+
+    <!-- Section Wawancara -->
+    <section class="background-f5 exclusive clearfix">
+  <div class="wrapper">
+    <div class="content clearfix">
+      <div class="col w-50">
+         <h2>Wawancara</h2>
+         <div class="box">
+           <div class="wrapper">
+             <h3>Wawancara</h3>
+             <p>
+               Menteri Kelautan dan Perikanan Susi Pudjiastuti: Im Alone             </p>
+           </div>
+         </div>
+       </div>
+       <div class="col w-50">
+         <a href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
+           <img src="http://images.tempointeraktif.co/mbm/foto/11140/92_95_wwc_0347.jpg">
+         </a>
+         <div class="wrapper">
+           <div class="quotes">
+           </div>
+           <!-- <h2>
+             Setelah kejadian ini, bakal mau dikawal?
+           </h2> -->
+           <p>
+                           <!-- <i>Wallahualam</i>, kita lihat nanti. Intinya, saya enggak takut. -->
+           </p>
+           <p>
+             <a class="button default" href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
+               <span>Selengkapnya</span>
+             </a>
+           </p>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Section Article rubik -->
+    <section class="layout-2">
+  <div class="wrapper">
+    <div class="card card-type-2 clearfix">
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/sport">
+    Sport    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155080/asa-dari-piton-burma">
+    <img src="http://images.tempointeraktif.co/mbm/foto/11130/64_65_ola_0347.jpg" alt="Asa dari Piton Burma">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155080/asa-dari-piton-burma">
+    <h2>
+      <span>Yusuf Kalla</span>Asa dari Piton Burma    </h2>
+  </a>
+  <p>
+    Petarung bebas Myanmar mencetak rekor dunia setelah menjuarai seni bela diri campuran ONE Championship di dua kelas. Ingin menyatukan negerinya yang terkoyak konflik.  </p>
+    </li>
 </div>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/core.js"></script>
-<script src="js/main.js"></script>
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/seni">
+    Seni    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read//">
+    <img src="http://images.tempointeraktif.co/all/nophoto.jpg" alt="">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read//">
+    <h2>
+      <span></span>    </h2>
+  </a>
+  <p>
+      </p>
+    </li>
+</div>
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/film">
+    Film    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155076/gado-gado-hanung">
+    <img src="http://images.tempointeraktif.co/mbm/foto/11126/46_47_fil_0347.jpg" alt="Gado-gado Hanung">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155076/gado-gado-hanung">
+    <h2>
+      <span>Yusuf Kalla</span>Gado-gado Hanung    </h2>
+  </a>
+  <p>
+    Hanung Bramantyo dan Reza Rahadian kembali berkolaborasi dalam Benyamin Biang Kerok era modern. Sebuah komedi campur aduk.  </p>
+    </li>
+</div>
+    </div>
+    <div class="card card-type-2 clearfix">
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/sains">
+    Sains    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155022/bendera-sisingamangaraja-di-belgia">
+    <img src="http://images.tempointeraktif.co/mbm/foto/11093/64_65_iltek_5446.jpg" alt="Bendera Sisingamangaraja di Belgia">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155022/bendera-sisingamangaraja-di-belgia">
+    <h2>
+      <span>Jokowi Dodo</span>Bendera Sisingamangaraja di Belgia    </h2>
+  </a>
+  <p>
+    Bendera yang dianggap milik Kerajaan Sisingamangaraja tersimpan di Museum Aan de Stroom, Antwerp, Belgia. Perlu dibuat katalog untuk benda-benda budaya Nusantara.  </p>
+    </li>
+</div>
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/kesehatan">
+    Kesehatan    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155023/saat-nyeri-terus-menyerang">
+    <img src="http://images.tempointeraktif.co/all/nophoto.jpg" alt="Saat Nyeri Terus Menyerang">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155023/saat-nyeri-terus-menyerang">
+    <h2>
+      <span>Jokowi Dodo</span>Saat Nyeri Terus Menyerang    </h2>
+  </a>
+  <p>
+    Fibromyalgia sulit dideteksi. Penanganannya baru sebatas mengurangi rasa nyeri.  </p>
+    </li>
+</div>
+        <div class="col w-33">
+<li class="clearfix">
+      <h3><a href="http://majalah.tempointeraktif.co/dunia">
+    Dunia    </a>
+  </h3>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155075/saut-situmorang-wakil-ketua-kpk-kami-dorong-negara-membiayai-partai">
+    <img src="http://images.tempointeraktif.co/mbm/foto/11124/40_43_nas_0347_2.jpg" alt="Saut Situmorang, Wakil Ketua KPK: Kami Dorong Negara Membiayai Partai">
+  </a>
+  <a href="http://MAJALAH.tempointeraktif.co/read/155075/saut-situmorang-wakil-ketua-kpk-kami-dorong-negara-membiayai-partai">
+    <h2>
+      <span>Yusuf Kalla</span>Saut Situmorang, Wakil Ketua KPK: Kami Dorong Negara Membiayai Partai    </h2>
+  </a>
+  <p>
+    KOMISI Pemberantasan Korupsi menangkap lima calon kepala daerah tingkat kabupaten/kota dan provinsi yang diduga menerima suap. Penangkapan itu berawal dari laporan masyarakat tentang tindak-tanduk calon kepala daerah yang umumnya pejabat lama. Setiap tahun, KPK menerima 7.000 laporan yang berkaitan dengan korupsi kepala daerah.
+Kepala-kepala daerah ini menggarong uang publik lewat pelbagai modus: proyek, obral izin, atau sumbangan kampanye. KPK mengidentifikasi pelbagai modus itu dari banyak laporan tepercaya yang dikirim lawan politik atau kolega mereka sendiri. "Jangan salah, banyak laporan justru dibuat oleh teman seranjang mereka," kata Wakil Ketua KPK Saut Situmorang kepada Rusman Paraqbueq dan Wayan Agus Purnomo dari Tempo, pekan lalu.  </p>
+    </li>
+</div>
+     </div>
+  </div>
+</section>
+
+
+    <!-- Section Exclusive Investigasi  -->
+    
+
+    <!-- Section Pokok Tokoh -->
+    <section class="layout-2 pokok-tokoh">
+  <div class="wrapper">
+    <h3>
+        <a href="http://majalah.tempointeraktif.co/pokok-tokoh">
+          Pokok Tokoh        </a>
+    </h3>
+    <div class="card card-type-3 clearfix">
+              <div class="col w-33">
+        <li class="clearfix">
+          <a href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga">
+          </a>
+          <a href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
+            <h2>
+              <span>Yusuf Kalla</span>Alexander Rusli: Tinggalkan Grup Keluarga            </h2>
+          </a>
+          <p>
+              PEMILIHAN Gubernur DKI Jakarta sempat membawa keretakan dalam keluarga Alexander Rusli, mantan Direktur Utama PT Indosat Tbk. Pada akhir 2016 dan awal 2017, grup WhatsApp keluarganyaterdiri atas ayah, ibu, adik, ipar, dan dua pamannyadibanjiri hoaks dan konten negatif. Grup itu, Alex melanjutkan, sangat aktif. Ada saja hal yang dibahas anggotanya saban hari. Capek menjelaskan isu satu per satu, Alex memilih meninggalkan grup.          </p>
+        </li>
+      </div>
+            <div class="col w-33">
+        <li class="clearfix">
+          <a href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11142/96_97_poktok_0347_2.jpg" alt="Rival Himran: Sekamar dengan Mantan Teroris">
+          </a>
+          <a href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
+            <h2>
+              <span>Yusuf Kalla</span>Rival Himran: Sekamar dengan Mantan Teroris            </h2>
+          </a>
+          <p>
+              Rival Himran, 36 tahun, tak pernah membayangkan bakal satu kamar dengan mantan teroris. Saat didapuk menjadi figuran sekaligus pencipta lagu tema film Jalan Pulang, pembetot bas grup musik Steven & Coconut Treez ini harus menjalani syuting di Poso, Sulawesi Tengah. Awalnya, ia tak tahu sutradara filmnya adalah mantan narapidana terorisme di Poso, Arifuddin Lako. "Dalam perjalanan saya baru diberi tahu dan selama syuting harus menginap di rumahnya," ujarnya saat dihubungi pada Jumat dua pekan lalu.          </p>
+        </li>
+      </div>
+            <div class="col w-33">
+        <li class="clearfix">
+          <a href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
+            <img src="http://images.tempointeraktif.co/mbm/foto/11143/96_97_poktok_0347_1.jpg" alt="Rosa Rai Djalal: Pulang Tengah Malam">
+          </a>
+          <a href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
+            <h2>
+              <span>Yusuf Kalla</span>Rosa Rai Djalal: Pulang Tengah Malam            </h2>
+          </a>
+          <p>
+              Rosa Rai Djalal, 43 tahun, harus membayar mahal keputusannya terjun sebagai produser film, yaitu pulang tengah malam. Setelah menjadi produser eksekutif di tiga film, dia nyemplung lebih dalam menjadi produser Guru Ngaji karya sutradara Erwin Arnada, yang tayang bulan ini.          </p>
+        </li>
+      </div>
+          </div>
+  </div>
+</section>
+
+
+    <!-- Section Cartoon -->
+    <section class="cartoon">
+  <div class="wrapper">
+      <div class="content clearfix">
+      <a href="http://MAJALAH.tempointeraktif.co/read/155064/ramai-ramai-bangun-museum-pribadi">
+        <img src="http://images.tempointeraktif.co/mbm/foto/11119/10_kar_0347.jpg">
+      </a>
+      <div class="wrapper">
+        <h2>
+            Ramai-ramai Bangun Museum Pribadi        </h2>
+        <p>
+        <p>SEJUMLAH pengusaha membangun museum. Haryanto Adikoesoemo, bos PT AKR Corporindo Tbk-perusahaan yang bergerak di bidang bisnis bahan kimia-misalnya, mendirikan Museum of Modern and Contemporary Art in Nusantara di Kebon Jeruk, Jakarta Barat, November tahun lalu. Museum ini terbuka untuk umum dengan menampilkan 800 karya seni modern dan kontemporer. Animo masyarakat menyambut museum pun luar biasa. Semenjak dibuka, sudah sekitar 100 ribu orang yang berkunjung ke sana<p>
+      </div>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Section Exclusive Wawancara -->
+    
+
+    <!-- Section Animasi Tempo buy -->
+            <section class="animation tempo-buy">
+          <div class="wrapper">
+            <div class="content">
+              <div class="box w-50">
+                <div class="wrapper">
+                  <h3>Edisi Senin, 12 Juni 2017</h3>
+                  <h1>Mencari Penyerang Novel Baswedan</h1>
+                  <a href="http://majalah.tempointeraktif.co/price" class="button default">
+                    <span>Berlangganan</span>
+                  </a>
+                  <p>Dapatkan diskon 45% di setiap pembelian paket berlangganan TEMPO.</p>
+                  <ul class="payment-method">
+                    <li><a class="mastercard" href=""></a></li>
+                    <li><a class="visa" href=""></a></li>
+                    <li><a class="atm-bersama" href=""></a></li>
+                    <li><a class="bca-klikpay" href=""></a></li>
+                    <li><a class="mandiri-clickpay" href=""></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="box w-50">
+                <div class="wrapper">
+                  <a href="http://majalah.tempointeraktif.co/gallery">
+                    <img src="http://majalah.tempointeraktif.co/assets/majalah/images/24.jpg" alt="Isi dengan edisi majalah">
+                  </a>
+                  <a href="http://majalah.tempointeraktif.co/gallery">
+                    <img src="http://majalah.tempointeraktif.co/assets/majalah/images/27.jpg" alt="Isi dengan edisi majalah">
+                  </a>
+                  <a href="http://majalah.tempointeraktif.co/gallery">
+                    <img src="http://majalah.tempointeraktif.co/assets/majalah/images/26.jpg" alt="Isi dengan edisi majalah">
+                  </a>
+                  <a href="http://majalah.tempointeraktif.co/gallery">
+                    <img src="http://majalah.tempointeraktif.co/assets/majalah/images/25.jpg" alt="Isi dengan edisi majalah">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+  </main>
+
+
+ <!-- footer -->
+ <footer>
+  <div class="wrapper">
+    <div class="row clearfix">
+      <div class="col w-50">
+        <h2>Berlangganan Majalah</h2>
+        <form action="#" method="post">
+          <input type="text" class="email" />
+          <input type="submit" value="Send"/>
+        </form>
+        <p>
+          Dapatkan diskon khusus dengan berlangganan majalah TEMPO selama 3 bulan.
+        </p>
+        <ul class="social">
+          <li><a class="facebook" href="https://id-id.facebook.com/TempoMedia/" target="blank"></a></li>
+          <li><a class="twitter" href="https://twitter.com/tempodotco" target="blank"></a></li>
+          <li><a class="youtube" href="https://www.youtube.com/channel/UC3QRoNY-nYDTNSv-1dR0P-g" target="blank"></a></li>
+        </ul>
+      </div>
+      <div class="col w-50">
+        <h2>Galeri Majalah</h2>
+        <ul class="galeri-majalah">
+                      <li><a href="http://majalah.tempointeraktif.co/edisi/998/2018-03-04" target="blank"><img src="http://images.tempointeraktif.co/mbm/cover/998/cover_5446.jpg"></a></li>
+                    <li><a href="http://majalah.tempointeraktif.co/edisi/999/2018-03-11" target="blank"><img src="http://images.tempointeraktif.co/mbm/cover/999/cover_0347.jpg"></a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col w-50">
+        <p>Copyright &copy; 2017 PT Tempo Inti Media tbk</p>
+      </div>
+      <div class="col w-50">
+        <ul class="breadcrumb">
+          <li><a href="#" target="blank">Tentang Kami</a></li>
+          <li><a href="#" target="blank">Kode Etik</a></li>
+          <li><a href="#" target="blank">Karir</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="arrow">
+      <div class="wrapper">
+          <a href="#"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+
+    <!-- Javascript -->
+    <script src="http://majalah.tempointeraktif.co/assets/majalah/js/jquery-3.1.1.min.js"></script>
+<script src="http://majalah.tempointeraktif.co/assets/majalah/js/core.js"></script>
+<script src="http://majalah.tempointeraktif.co/assets/majalah/js/main.js"></script>
+
 </body>
 </html>
