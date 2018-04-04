@@ -240,7 +240,7 @@ $(function(){
 	// });
 
   var inputTanggalSearch = $('#tanggal-search');
-	inputTanggalSearch.on('keyup', function(e) {
+	inputTanggalSearch.on('change', function(e) {
     e.preventDefault();
     var pilihanTanggalSearch = inputTanggalSearch.val();
     var inputTanggalSearchResult = window.location = "https://www.tempo.co/indeks/"+pilihanTanggalSearch;
@@ -249,7 +249,7 @@ $(function(){
 
 	var inputTanggalIndex = $('#tanggal-index');
 	var pilihanTanggalIndex = inputTanggalIndex.val();
-	inputTanggalIndex.on('keyup', function(e) {
+	inputTanggalIndex.on('change', function(e) {
 		e.preventDefault();
 		var pilihanTanggalIndex = inputTanggalIndex.val();
 		var pilihanKanal = $('#kanal').val();
@@ -310,12 +310,33 @@ $(function(){
         searchBox.removeClass('active');
       }
     });
+    if($('.search-box').hasClass('active')){
+      $('.box-login').removeClass('active');
+    }
   });
 
+  /* login */
+  var login = $('.login');
+  var boxLogin = $('.box-login');
+  login.on('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    boxLogin.addClass('active');
+    $(document).on('click', function(e){
+      if($(e.target).closest(boxLogin).length){
+
+      } else {
+        boxLogin.removeClass('active');
+      }
+    });
+  });
 
   if($('#home').length){
     var laput = new Swiper('.swiper-container.laput', {
-      autoplay: true,
+      autoplay: {
+        waitForTransition: true,
+        disableOnInteraction: false
+      },
       navigation: {
         nextEl: '.swiper-button-next-laput',
         prevEl: '.swiper-button-prev-laput',
@@ -323,17 +344,24 @@ $(function(){
       pagination: {
         el: '.swiper-pagination-laput'
       },
-      speed: 2000,
+      speed: 3000,
       loop: true
     });
     
     var mainPic = new Swiper('.swiper-container.main-pic', {
+      spaceBetween: 30,
       effect: 'fade',
-      speed: 2000,
+      speed: 3000,
+      loop: true,
+      autoplay: {
+        waitForTransition: true,
+        disableOnInteraction: false
+      },
+      fade: { crossFade: true }
     });
   
-    laput.controller.control = mainPic;
-    mainPic.controller.control = laput;
+    // laput.controller.control = mainPic;
+    // mainPic.controller.control = laput;
   }
 
   var $animation_elements = $('.animation');
@@ -363,10 +391,27 @@ $(function(){
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
   
+
+  if($('#detail').length){
+    // modify style for first paragraph
+    var relatedArticle = document.querySelector('blockquote.related');
+    var relatedArticleNext = relatedArticle.nextElementSibling;
+    relatedArticleNext.className = 'after-quotes'; // add first paragraph after blockquote
+    var relatedArticleHeight = relatedArticleNext.offsetHeight; // get next paragraph height
+    var relatedArticleCountChar = relatedArticleNext.innerHTML.replace(/ /g,"").length; // count letter inside paragraph without space
+    console.log(relatedArticleHeight);
+    // check if character inside first paragraph without space less than 350
+    if(relatedArticleCountChar < 350){
+      relatedArticleNext.nextElementSibling.className = 'after-quotes';
+    }
+  }
+
+
   if($('.gallery').length){
     console.log('ada');
     $('.gallery').addClass('active');
   }
+
 
   var formBerlangganan = $('footer input.email');
   formBerlangganan.val('Masukkan email Anda');
@@ -376,6 +421,7 @@ $(function(){
       $(this).val('');
     }
   });
+
   formBerlangganan.on('blur', function() {
     console.log('blur');
     if($(this).val() === ''){
@@ -383,3 +429,6 @@ $(function(){
 		}
   });
 });
+
+
+  
