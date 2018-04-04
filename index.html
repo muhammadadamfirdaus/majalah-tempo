@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="https://cdn.tmpo.co/papua/cover-1.jpg" />
 <meta name="twitter:creator" content="@tempodotco" />
 <link rel="shortcut icon" href="https://cdn.tmpo.co/favicon/tempo-white.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="http://majalah.tempointeraktif.co/assets/majalah/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="css/ie7-lower.css">
 <![endif]-->
@@ -37,7 +37,6 @@
 
 <body>
 <div id="home" class="container">
-
   <!-- navbar -->
   <header class="clearfix">
   <div class="col w-50">
@@ -57,6 +56,8 @@
       <li><a href="http://majalah.tempointeraktif.co/price">Berlangganan</a></li>
     </nav>
     <a class="search" href="#">
+    </a>
+    <a class="login" href="#">
     </a>
     <div class="search-box">
       <div class="w-50">
@@ -90,42 +91,32 @@
         TEMPO Media Group - Copyright &copy; 2018. Hak cipta dilindungi undang-undang.
       </p>
     </div>
+    <div class="box-login fadeIn">
+      <form action="http://koran.tempointeraktif.co/login" method="post" id="text">
+        <input type="text" class="loginform margin-bottom-xs" placeholder="username/email" name="username">
+        <input type="password" class="loginform margin-bottom-sm" placeholder="password" name="password">
+        <a href="javascript:document.getElementById('text').submit();" class="btn-login" title="Sign In">Sign In</a>
+        <!-- <input type="submit" class="btn-login" value="Sign In"> -->
+        <a href="https://langganan.tempo.co/reset_password" target="_blank" class="btn-forgot" title="forgot password">Forgot Password?</a>
+
+      </form>
+    </div>
   </div>
 </header>
 
   <main>
 
     <!-- Main Cover -->
-            <section class="cover">
+        <section class="cover">
           <div class="wrapper">
             <div class="content clearfix">
               <div class="col w-60 swiper-container main-pic">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg">
-                    <div class="box">
-                      <div class="wrapper">
-                        <h2>
-                          Novel Baswedan
-                        </h2>
-                        <h3>
-                          Banyak Orang Terlibat dalam Kasus Saya
-                        </h3>
-                      </div>
-                    </div>
+                    <img src="images/laput-1.jpg">
                   </div>
                   <div class="swiper-slide">
-                    <img src="http://images.tempointeraktif.co/mbm/foto/11142/96_97_poktok_0347_2.jpg">
-                    <div class="box">
-                      <div class="wrapper">
-                        <h2>
-                          Novel Baswedan
-                        </h2>
-                        <h3>
-                          Banyak Orang Terlibat dalam Kasus Saya
-                        </h3>
-                      </div>
-                    </div>
+                    <img src="images/laput-2.jpg">
                   </div>
                 </div>
               </div>
@@ -142,13 +133,15 @@
                     <div class="swiper-slide">
                       <a href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
                         <h2>
-                          Alexander Rusli: Tinggalkan Grup Keluarga                        </h2>
+                          Fabel untuk Pulau Buru
+                        </h2>
                       </a>
                     </div>
                     <div class="swiper-slide">
                       <a href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
                         <h2>
-                            Rival Himran: Sekamar dengan Mantan Teroris                        </h2>
+                          Saat Nyeri Terus Menyerang
+                        </h2>
                       </a>
                     </div>
                   </div>
@@ -160,8 +153,6 @@
             </div>
           </div>
         </section>
-
-
     <!-- Section Artikel lainnya -->
     <section class="layout-1">
   <div class="wrapper clearfix">
@@ -184,6 +175,7 @@ Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Conc
                 <li class="clearfix">
           <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
             <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga">
+            <!-- <img src="images/edit-1.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga"> -->
           </a>
           <div class="col w-60">
             <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
@@ -198,6 +190,7 @@ Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Conc
                 <li class="clearfix">
           <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
             <img src="http://images.tempointeraktif.co/mbm/foto/11142/96_97_poktok_0347_2.jpg" alt="Rival Himran: Sekamar dengan Mantan Teroris">
+            <!-- <img src="images/edit-2.jpg" alt="Rival Himran: Sekamar dengan Mantan Teroris"> -->
           </a>
           <div class="col w-60">
             <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155096/rival-himran-sekamar-dengan-mantan-teroris">
@@ -212,6 +205,7 @@ Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Conc
                 <li class="clearfix">
           <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
             <img src="http://images.tempointeraktif.co/mbm/foto/11143/96_97_poktok_0347_1.jpg" alt="Rosa Rai Djalal: Pulang Tengah Malam">
+            <!-- <img src="images/edit-4.jpg" alt="Rosa Rai Djalal: Pulang Tengah Malam"> -->
           </a>
           <div class="col w-60">
             <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155095/rosa-rai-djalal-pulang-tengah-malam">
@@ -226,6 +220,7 @@ Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Conc
                 <li class="clearfix">
           <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
             <img src="http://images.tempointeraktif.co/mbm/foto/11140/92_95_wwc_0347.jpg" alt="Menteri Kelautan dan Perikanan Susi Pudjiastuti: Im Alone">
+            <!-- <img src="images/edit-3.jpg" alt="Menteri Kelautan dan Perikanan Susi Pudjiastuti: Im Alone"> -->
           </a>
           <div class="col w-60">
             <a class="col" href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
@@ -268,6 +263,7 @@ Sejak dilantik Presiden Joko Widodo pada 2014, Susi menerapkan terapi kejut deng
        <div class="col w-50">
          <a href="http://MAJALAH.tempointeraktif.co/read/155094/menteri-kelautan-dan-perikanan-susi-pudjiastuti-im-alone">
            <img src="http://images.tempointeraktif.co/mbm/foto/11140/92_95_wwc_0347.jpg">
+           <!-- <img src="images/edit-3.jpg"> -->
          </a>
          <div class="wrapper">
            <div class="quotes">
@@ -564,14 +560,12 @@ Kepala-kepala daerah ini menggarong uang publik lewat pelbagai modus: proyek, ob
     </div>
   </div>
 </footer>
-
-
 </div>
 
-    <!-- Javascript -->
-    <script src="http://majalah.tempointeraktif.co/assets/majalah/js/jquery-3.1.1.min.js"></script>
-<script src="http://majalah.tempointeraktif.co/assets/majalah/js/core.js"></script>
-<script src="http://majalah.tempointeraktif.co/assets/majalah/js/main.js"></script>
+<!-- Javascript -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
