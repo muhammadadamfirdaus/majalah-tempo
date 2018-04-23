@@ -52,13 +52,27 @@
   <div class="col w-50">
     <nav class="menu">
       <div class="box-login">
-        <form action="http://koran.tempointeraktif.co/login" method="post" id="text">
-          <input type="text" class="loginform margin-bottom-xs" placeholder="username/email" name="username">
-          <input type="password" class="loginform margin-bottom-sm" placeholder="password" name="password">
-          <a href="javascript:document.getElementById('text').submit();" class="btn-login" title="Sign In">Sign In</a>
-          <!-- <input type="submit" class="btn-login" value="Sign In"> -->
-          <a href="https://langganan.tempo.co/reset_password" target="_blank" class="btn-forgot" title="forgot password">Forgot Password?</a>
-        </form>
+        <div class="wrapper">
+          <div class="profile clearfix">
+            <div class="col w-30 pic">
+              <a href="#">
+                <img src="images/1.jpg" alt="profile img">
+              </a>
+            </div>
+            <div class="col w-70 username">
+              <a href="#">
+                Kiki Andina Riani Furi Harum Mewangi Sepanjang Hari
+              </a>
+              <a href="#">
+                Sign Out
+              </a>
+            </div>
+          </div>
+          <hr>
+          <div class="data">
+            <!-- Extra Info -->
+          </div>
+        </div>
       </div>
       <div class="wrapper">
         <li><a href="http://majalah.tempointeraktif.co/">Home</a></li>
@@ -68,7 +82,7 @@
     </nav>
     <a class="search" href="#">
     </a>
-    <a class="button-login login" href="#">
+    <a class="button-login logged" href="#">
     </a>
     <div class="search-box">
       <div class="w-50">
@@ -79,16 +93,15 @@
           <h2>
             Cari Majalah Edisi:
           </h2>
-            <form action="http://majalah.tempointeraktif.co/search" method="get">
-              <div id="datepicker">
-                <div class="wrapper">
-                      <!-- <input type="date" id="tanggal-search" value="2018-03-25"> -->
-                </div>
+          <form action="http://majalah.tempointeraktif.co/search" method="get">
+            <div id="datepicker">
+              <div class="wrapper">
+                <!-- <input type="date" id="tanggal-search" value="2018-03-25"> -->
               </div>
-              <input type="month" name="date" value="2018-03">
-
-              <input type="submit" value="Cari"/>
-            </form>
+            </div>
+            <input type="month" name="date" value="2018-03">
+            <input type="submit" value="Cari"/>
+          </form>
         </div>
         <div class="col w-50 search-keyword clearfix">
           <h2>atau masukkan kata kunci pencarian</h2>
@@ -172,7 +185,7 @@
 Ini pertemuan kami kedua, setelah hampir sedasawarsa. Ia hadiahkan bukunya, Concerto al-Quds, yang versi Arabnya terbit pada 2012. "Ini buku saya yang paling akhir," katanya.            </p>
           </div>
       </li>
-                <li class="clearfix">
+      <li class="clearfix">
           <a class="col w-40" href="http://MAJALAH.tempointeraktif.co/read/155097/alexander-rusli-tinggalkan-grup-keluarga">
             <img src="http://images.tempointeraktif.co/mbm/foto/11141/96_97_poktok_0347_3.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga">
             <!-- <img src="images/edit-1.jpg" alt="Alexander Rusli: Tinggalkan Grup Keluarga"> -->
