@@ -72,18 +72,22 @@ $(function(){
       }
 
       /* login */
-      var login = $('.login');
+      var login = $('a.button-login');
       login.on('click', function(e){
         e.preventDefault();
         e.stopImmediatePropagation();
-        boxLogin.addClass('active');
-        $(document).on('click', function(e){
-          if($(e.target).closest(boxLogin).length){
+        if(!boxLogin.hasClass('active')){
+          boxLogin.addClass('active');
+          $(document).on('click', function(e){
+            if($(e.target).closest(boxLogin).length){
 
-          } else {
-            boxLogin.removeClass('active');
-          }
-        });
+            } else {
+              boxLogin.removeClass('active');
+            }
+          });
+        } else {
+          boxLogin.removeClass('active');
+        }
       });
     }
   }
@@ -377,9 +381,6 @@ $(function(){
       },
       fade: { crossFade: true }
     });
-  
-    // laput.controller.control = mainPic;
-    // mainPic.controller.control = laput;
   }
 
   var $animation_elements = $('.animation');
@@ -438,19 +439,28 @@ $(function(){
     var tinggiFooter = footer.outerHeight();
     
     var subscribeModal = $('.subscribe');
-    if(scroll > (jarakFooter + tinggiFooter - windowHeight)){
-      console.log('masuk');
-      subscribeModal.addClass('disabled');
+
+    var subscribeModalClose = false;
+    if(!subscribeModalClose){
+      console.log('opened');
+      subscribeModal.add('.title a').on('click', function(e){
+        e.preventDefault();
+        console.log('true');
+        subscribeModalClose = true;
+        subscribeModal.addClass('disabled');
+      });
     } else {
-      console.log('keluar');
-      subscribeModal.removeClass('disabled');
+      if(scroll > (jarakFooter + tinggiFooter - windowHeight)){
+        subscribeModal.addClass('disabled');
+      } else {
+        subscribeModal.removeClass('disabled');
+      }
     }
 	});
 
 	function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
 	}
-
 
   if($('.gallery').length){
     console.log('ada');
