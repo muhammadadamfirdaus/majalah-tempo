@@ -856,8 +856,21 @@ header > .col:nth-of-type(1):before {
   background: #f44336;
 }
 
-header .col {
+header .col,
+header > .col:nth-of-type(1) a.beta {
   position: relative;
+}
+
+header > .col:nth-of-type(1) a.beta:before {
+  content: 'beta';
+  color: #f44336;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 /* social */
@@ -2791,8 +2804,12 @@ article .author p {
     overflow: hidden;
   }
 
-  .card li > a:nth-of-type(1) {
+  /* .card li > a:nth-of-type(1) {
     max-height: 222px !important;
+  } */
+
+  .pokok-tokoh .card li > a:nth-of-type(1) {
+    max-height: 400px;
   }
 }
 
@@ -2866,6 +2883,16 @@ article .author p {
     max-height: 168px;
     overflow: hidden;
   }
+
+  .pokok-tokoh .card li > a:nth-of-type(1) {
+    background: #000;
+    max-height: 500px;
+  }
+
+  /* .pokok-tokoh .card li > a:nth-of-type(1) img {
+    width: auto;
+    height: 100%;
+  } */
 }
 /* macbook pro 13 inch with bookmark toolbar show */
 @media screen and (min-width: 800px) and (max-height: 570px) and (min-resolution: 192dpi) {
