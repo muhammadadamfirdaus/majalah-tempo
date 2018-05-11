@@ -3439,6 +3439,7 @@ article .author p {
 
   .card.card-type-2 div > li a:nth-of-type(1) {
     max-height: 280px;
+    overflow: hidden;
   }
 
   section.intermezzo .wrapper > .card:nth-of-type(1) .w-40 .wrapper {
