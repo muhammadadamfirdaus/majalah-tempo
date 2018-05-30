@@ -1427,9 +1427,18 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .main-cover {
   position: absolute;
-  right: -130px;
+  right: 160px; /* -130px */
   top: 15%;
   z-index: 3;
+}
+
+.main-cover .wrapper > h4 {
+  display: block;
+  font-size: 16px;
+  font-family: 'Roboto', Arial;
+  margin: 1.6em auto;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .swiper-container.laput {
@@ -1438,6 +1447,16 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   width: 80%;
   height: 160px;
   left: 40px;
+}
+
+.cover .content > .swiper-container h3 {
+  background: #e53935;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Roboto', Arial;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 8px 16px;
 }
 
 .swiper-container.laput .swiper-slide a {
@@ -1464,6 +1483,38 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-laput {
   bottom: 0;
+}
+
+.swiper-container.main-2 h3 {
+  margin-top: 80px;
+}
+
+.swiper-container.main-2 .swiper-wrapper {
+  display: block;
+  background: #e5e5e5;
+}
+
+.swiper-container.main-2 .swiper-slide {
+  width: auto;
+  height: auto;
+  background: #fff;
+  margin: 0.5em 20px;
+}
+
+.swiper-container.main-2 .swiper-slide h2 {
+  padding: 1em;
+  font-size: 1.8em;
+}
+
+.cover .content > .swiper-container.main-2 h3 {
+  margin-left: 20px;
+}
+
+.swiper-container.main-2 .swiper-slide a {
+  display: block;
+
+  color: #000;
+  text-decoration: none;
 }
 
 html.ios {
@@ -2830,6 +2881,11 @@ article .author p {
 /* desktop */
 /* HiDPI */
 @media screen and (min-width: 1440px){
+  .main-cover {
+    width: 240px !important;
+    /* height: 100%; */
+  }
+
   .card.card-type-1 li > a:nth-of-type(1) {
     width: 30%;
   }
@@ -2934,7 +2990,7 @@ article .author p {
   }
 
   .main-cover {
-    width: 240px;
+    width: 180px;
     /* height: 100%; */
   }
 

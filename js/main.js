@@ -354,33 +354,37 @@ $(function(){
 
 
   if($('#home').length){
-    var laput = new Swiper('.swiper-container.laput', {
-      autoplay: {
-        waitForTransition: true,
-        disableOnInteraction: false
-      },
-      navigation: {
-        nextEl: '.swiper-button-next-laput',
-        prevEl: '.swiper-button-prev-laput',
-      },
-      pagination: {
-        el: '.swiper-pagination-laput'
-      },
-      speed: 3000,
-      loop: true
-    });
-    
-    var mainPic = new Swiper('.swiper-container.main-pic', {
-      spaceBetween: 30,
-      effect: 'fade',
-      speed: 3000,
-      loop: true,
-      autoplay: {
-        waitForTransition: true,
-        disableOnInteraction: false
-      },
-      fade: { crossFade: true }
-    });
+    var olderPosts = $('.main-2');
+    if(!olderPosts.length){
+      console.log('battle!');
+      var laput = new Swiper('.swiper-container.laput', {
+        autoplay: {
+          waitForTransition: true,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-laput',
+          prevEl: '.swiper-button-prev-laput',
+        },
+        pagination: {
+          el: '.swiper-pagination-laput'
+        },
+        speed: 3000,
+        loop: true
+      });
+      
+      var mainPic = new Swiper('.swiper-container.main-pic', {
+        spaceBetween: 30,
+        effect: 'fade',
+        speed: 3000,
+        loop: true,
+        autoplay: {
+          waitForTransition: true,
+          disableOnInteraction: false
+        },
+        fade: { crossFade: true }
+      });
+    }
   }
 
   var $animation_elements = $('.animation');
