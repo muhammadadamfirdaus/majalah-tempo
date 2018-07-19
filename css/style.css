@@ -6,7 +6,7 @@ Muhammad Adam Firdaus 2018
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, .quote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -48,11 +48,11 @@ img {
   display: block;
 }
 
-blockquote, q {
+.quote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
+.quote:before, .quote:after,
 q:before, q:after {
   content: '';
   content: none;
@@ -2622,7 +2622,7 @@ article.mode-2 > .w-50 p:nth-of-type(1) > span {
   padding: 0 0.4em 0.2em 0.2em;
 }
 
-article.mode-2 blockquote {
+article.mode-2 .quote {
   border-bottom: 4px solid #e53935;
   font-size: 120%;
   font-style: italic;
@@ -2630,29 +2630,29 @@ article.mode-2 blockquote {
   margin: 0 3em 2em -3em;
 }
 
-article.mode-2 blockquote.right {
+article.mode-2 .quote.right {
   float: right;
   padding: 0 0.2em 0.2em 0.2em;
   margin: 0 -3em 2em 3em;
 }
 
-article > .w-50 blockquote.related {
+article > .w-50 .quote.related {
   font-style: normal;
   margin: 2em 3em 2em -3em;
 }
 
-article > .w-50 blockquote.related h2 {
+article > .w-50 .quote.related h2 {
   text-transform: uppercase;
   font-family: 'Roboto';
   font-size: 140%;  
 }
 
-article > .w-50 blockquote.related li {
+article > .w-50 .quote.related li {
   list-style: none;
   margin: 1em 0;
 }
 
-article > .w-50 blockquote.related li a {
+article > .w-50 .quote.related li a {
   color: #000;
   text-decoration: none;
 }
@@ -2666,29 +2666,29 @@ article > .w-50 p.after-quotes:last-child {
   width: 100%;
 }
 
-article blockquote.person {
+article .quote.person {
   padding: 1.6em 0.2em 0.2em 0.2em;
 }
 
-article blockquote.person > a {
+article .quote.person > a {
   display: block;
   width: 30%;
   margin: 0 auto;
   text-align: center;
 }
 
-article blockquote.person a {
+article .quote.person a {
   position: relative;
   text-align: center;
   z-index: 1;
 }
 
-article blockquote.person img {
+article .quote.person img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
 
-article.mode-2 blockquote.person p > span {
+article.mode-2 .quote.person p > span {
   position: absolute;
   left: -0.8em;
 }
@@ -3075,6 +3075,10 @@ article .author p {
     padding: 1em 2em;
     bottom: -1em;
     right: -2.5em;
+  }
+
+  article.mode-2 > .w-50 {
+    width: 728px;
   }
 }
 /* macbook pro 13 inch with bookmark toolbar show */
@@ -3600,11 +3604,11 @@ article .author p {
     margin: 1.6em;
   }
 
-  article > .w-50 blockquote {
+  article > .w-50 .quote {
     margin: 0 3em 2em 1em;
   }
 
-  article > .w-50 blockquote.right {
+  article > .w-50 .quote.right {
     margin: 0 1em 2em 3em;
   }
 
@@ -3626,7 +3630,7 @@ article .author p {
 }
 /* small devices, iphone 5 */
 @media screen and (max-width: 380px){
-  article blockquote.w-40 {
+  article .quote.w-40 {
     width: auto;
   }
 
@@ -3672,8 +3676,8 @@ article .author p {
     left: 25%;
   }
 
-  article blockquote,
-  article blockquote.right {
+  article .quote,
+  article .quote.right {
     padding: 0 1em;
     margin: 0 0 1em 0;
   }

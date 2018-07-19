@@ -417,7 +417,7 @@ $(function(){
 
   if($('#detail').length){
     // modify style for first paragraph
-    var relatedArticle = document.querySelector('blockquote.related');
+    var relatedArticle = document.querySelector('.quote.related');
     var relatedArticleNext = relatedArticle.nextElementSibling;
     relatedArticleNext.className = 'after-quotes'; // add first paragraph after blockquote
     var relatedArticleHeight = relatedArticleNext.offsetHeight; // get next paragraph height
@@ -487,6 +487,19 @@ $(function(){
 			$(this).val('Masukkan email Anda');
 		}
   });
+
+  if($('article .wrapper > p').length > 4){
+    $('article .wrapper > p:nth-child(4)').after(`
+    <div class="ads">
+      <!-- begin ads -->
+      <!-- <a href="#">
+        <img src="http://majalah.tempointeraktif.co/assets/majalah/images/banner-rolex.jpg">
+      </a> -->
+      <iframe src="https://webtorial.tempo.co/adam/banners/728x90-1/" width="728" height="90"></iframe>
+      <!-- end ads -->
+    </div>
+    `);
+  }
 });
 
 
