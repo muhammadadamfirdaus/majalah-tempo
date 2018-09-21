@@ -2881,6 +2881,7 @@ article .author p {
   margin: 0 auto;
   padding: 10em 0 5em;
   position: relative;
+  text-align: center;
 }
 
 .article-navigation .pagination-next,
@@ -2898,6 +2899,10 @@ article .author p {
 
 .article-navigation .pagination-prev {
   left: 0;
+}
+
+.article-navigation p {
+  margin-bottom: 1em;
 }
 
 /* desktop */
@@ -3615,6 +3620,10 @@ article .author p {
 
   section.exclusive.wawancara > .w-50:nth-of-type(1) > .wrapper > div {
     padding-top: 2em;
+  }
+
+  .article-navigation {
+    width: 90%;
   }
 
   article.mode-1 > .wrapper,
