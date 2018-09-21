@@ -567,6 +567,7 @@ button.swiper-pagination-bullet {
   border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
+  touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -775,6 +776,7 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
+  perspective: 1200px;
 }
 
 
@@ -1134,9 +1136,9 @@ header .logged {
   border-bottom-left-radius: 10px;
 }
 
-.search-box .wrapper div:nth-of-type(2)  input[type=text]:focus{
-  /* box-shadow: 0px -1px 10px 0px #000; */
-}
+/* .search-box .wrapper div:nth-of-type(2)  input[type=text]:focus{
+  box-shadow: 0px -1px 10px 0px #000;
+} */
 
 .search-box .wrapper div:nth-of-type(2)  input[type=submit]{
   padding:1em 2em;
@@ -1576,9 +1578,9 @@ section.cover .content .col.w-60 {
   float: right;
 }
 
-section .main-cover {
-  /* perspective: 1000px; */
-}
+/* section .main-cover {
+  perspective: 1000px;
+} */
 
 /* section .main-cover:hover .wrapper {
   transform: rotateY(-180deg);
@@ -2044,7 +2046,7 @@ section.layout-3 .card:nth-of-type(1n+3) {
 }
 
 section.layout-3 .more {
-  display: inline-block;
+  display: block;
   float: right;
 }
 
@@ -2316,9 +2318,9 @@ footer input[type=text]{
   border-bottom-left-radius: 10px;
 }
 
-footer  input[type=text]:focus{
-  /* box-shadow: 0px -1px 10px 0px #000; */
-}
+/* footer  input[type=text]:focus{
+  box-shadow: 0px -1px 10px 0px #000;
+} */
 
 footer  input[type=submit]{
   padding:1em 2em;
@@ -2595,10 +2597,6 @@ article.mode-1 .wrapper div:nth-of-type(1) > .wrapper > p {
   line-height: 1.6em;
 }
 
-article.mode-2 > .w-50:nth-of-type(1) {
-  padding: 10em 0 0;
-}
-
 article.mode-2 > .w-50 {
   margin: 0 auto;
 }
@@ -2850,9 +2848,9 @@ article .author p {
   transition: all 0.5s ease;
 }
 
-.subscribe .wrapper {
-  /* padding: 1em; */
-}
+/* .subscribe .wrapper {
+  padding: 1em;
+} */
 
 .subscribe .title {
   background: #d3d3d3;
@@ -2862,7 +2860,7 @@ article .author p {
 }
 
 .subscribe .title > a {
-  display: inline-block;
+  display: block;
   float: right;
   font-size: 13px;
   margin: 5px;
@@ -2876,6 +2874,30 @@ article .author p {
 .subscribe .content p {
   font-size: 14px;
   padding: 15px 7.5px;
+}
+
+.article-navigation {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10em 0 5em;
+  position: relative;
+}
+
+.article-navigation .pagination-next,
+.article-navigation .pagination-prev {
+  position: absolute;
+  background: #e53935;
+  padding: 0.8em 1.3em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.article-navigation .pagination-next {
+  right: 0;
+}
+
+.article-navigation .pagination-prev {
+  left: 0;
 }
 
 /* desktop */
