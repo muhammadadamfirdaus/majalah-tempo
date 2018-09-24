@@ -2578,7 +2578,8 @@ footer .breadcrumb li a {
 }
 
 .card h2 > a,
-.card a > h2 {
+.card a > h2,
+.card h5 > a {
   color: #000;
 }
 
