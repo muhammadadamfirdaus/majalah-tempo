@@ -39,7 +39,7 @@ html, body {
 }
 
 body {
-  font-family: "Publico Light";
+  font-family: "Publico Roman";
   font-size: 16px;
   font-weight: 300;
 }
@@ -141,7 +141,7 @@ q:before, q:after {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Titillium Web Black";
+  font-family: "Titillium Web Bold";
 }
 
 h1 {
@@ -337,6 +337,15 @@ i {
 
 }
 
+@font-face {
+  font-family: 'Titillium Web SemiBold';
+  src: url('fonts/TitilliumWeb-SemiBold.woff2') format('woff2'),
+       url('fonts/TitilliumWeb-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 
 @font-face {
   font-family: 'Publico Light';
@@ -344,6 +353,16 @@ i {
         url('fonts/Publico-Light.woff') format('woff'),
         url('fonts/Publico-Light.ttf')  format('truetype'),
         url('fonts/Publico-Light.svg#Publico-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Publico Roman';
+  src:  url('fonts/PublicoText-Roman.eot?#iefix') format('embedded-opentype'),
+        url('fonts/PublicoText-Roman.woff') format('woff'),
+        url('fonts/PublicoText-Roman.ttf')  format('truetype'),
+        url('fonts/PublicoText-Roman.svg#Publico-Roman') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2593,8 +2612,9 @@ h3 > a {
 
 article h1,
 .card h2 {
-  font-family: 'Titillium Web Black', Times;
+  font-family: 'Titillium Web Bold', Times;
   text-transform: uppercase;
+  line-height: 40px;
 }
 
 .card h2 > span {
@@ -2671,7 +2691,8 @@ article h1,
 
 /* card type 3 */
 .card.card-type-3 a {
-  margin: 1em 0 0;
+    /* margin: 1em 0 0; */
+  margin: 0 0 0;
   font-size: 80%;
 }
 
@@ -2684,6 +2705,11 @@ article h1,
 .button.default {
   background: #d32f2f;
   color: #fff;
+}
+
+.button.nav-artikel {
+  /* background: #d32f2f; */
+  color: #d32f2f;
 }
 
 .button.default span {
@@ -2701,7 +2727,7 @@ article h1,
 .article-navigation {
   width: 50%;
   margin: 0 auto;
-  padding: 10em 0 5em;
+  padding: 4em 0 4em;
   position: relative;
   text-align: center;
 }
@@ -2709,7 +2735,7 @@ article h1,
 .article-navigation .pagination-next,
 .article-navigation .pagination-prev {
   position: absolute;
-  background: #e53935;
+  background: #fff;
   padding: 0.8em 1.3em;
   border-radius: 4px;
   cursor: pointer;
@@ -2785,7 +2811,7 @@ article.mode-1 .wrapper div:nth-of-type(1) > .wrapper > p {
 }
 
 article.mode-2 > .w-50:nth-of-type(1) {
-  padding: 10em 0 0;
+  padding: 0 0 0;
 }
 
 article.mode-2 > .w-50 {
@@ -3356,6 +3382,16 @@ article .author p {
 }
 /* all mobile devices */
 @media screen and (max-width: 800px){
+    .hide_mobile {
+        display: none;
+    }
+    article h1,
+    .card h2 {
+      font-family: 'Titillium Web Bold', Times;
+      text-transform: uppercase;
+      font-size: 28px;
+      line-height: 35px;
+    }
     .mobileFirst {
         display: block;
     }
@@ -3782,6 +3818,7 @@ article .author p {
 
   .card.card-type-1 li > div.col h2 {
     margin-bottom: 12px;
+    margin-top: -55px;
   }
 
   .card.card-type-2 div > li a:nth-of-type(1) {
@@ -3899,6 +3936,10 @@ article .author p {
     margin: 0 1em 2em 3em;
   }
 
+  article > figure figcaption {
+    position: relative;
+  }
+
   footer input[type=text],
   footer input[type=submit] {
     padding: 1em;
@@ -3952,7 +3993,7 @@ article .author p {
   }
 
   main {
-    padding-bottom: 30em;
+    padding-bottom: 15em;
   }
 
   section .wrapper {

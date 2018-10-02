@@ -496,6 +496,12 @@ $(function(){
   //   </div>
   //   `);
   // }
+
+  if($('.rubrik').length){
+    var slideGallery = new Swiper('.swiper-container.rubrik', {
+      loop: true
+    });
+  }
 });
 
 
