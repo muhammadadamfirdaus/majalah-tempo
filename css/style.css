@@ -2791,7 +2791,7 @@ article > figure figcaption {
 }
 
 article > figure figcaption .wrapper {
-  padding: 1em;
+  padding: 1em 2.5em 1em 1em;
   color: #fff;
   font-family: "Titillium Web Bold", Roboto, Arial;
 }
@@ -3753,6 +3753,32 @@ article .author p {
   article > figure:nth-of-type(1) img {
     position: static;
     width: 100%;
+  }
+
+  article a.caption-button {
+    z-index: 9;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 16px;
+    background: #000;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  article > figure figcaption {
+    display: none;  
+  }
+
+  article > figure figcaption.active {
+    display: block;  
   }
 
   article .text.w-50 .wrapper {

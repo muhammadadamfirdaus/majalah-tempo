@@ -415,7 +415,7 @@ $(function(){
   $window.trigger('scroll');
   
 
-  if($('#detail').length){
+  if($('.quote.related').length){
     // modify style for first paragraph
     var relatedArticle = document.querySelector('.quote.related');
     var relatedArticleNext = relatedArticle.nextElementSibling;
@@ -482,6 +482,17 @@ $(function(){
     if($(this).val() === ''){
 			$(this).val('Masukkan email Anda');
 		}
+  });
+
+  let figcaptionMobile = $('article figcaption');
+  $('.caption-button').on('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if(figcaptionMobile.hasClass('active')){
+      figcaptionMobile.removeClass('active');
+    } else {
+      figcaptionMobile.addClass('active');
+    }
   });
 
   // if($('article .wrapper > p').length > 4){
