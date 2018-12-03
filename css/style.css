@@ -189,6 +189,10 @@ table {
   clear: both;
 }
 
+.w-10 {
+  width: 10%;
+}
+
 .w-20 {
   width: 20%;
 }
@@ -2655,7 +2659,7 @@ article h1,
 }
 
 .card.card-type-1 li > div.col p {
-  max-height: 80px;
+  /* max-height: 80px; */
   line-height: 25px;
 }
 
@@ -2928,6 +2932,11 @@ article .author {
   margin: 5em 0;
 }
 
+article .author.author-top {
+  background: none;
+  margin: 0;
+}
+
 article .author2 {
   background: #f2f2f2;
   margin: 5em 0;
@@ -2937,6 +2946,13 @@ article .author2 {
 
 article .author > .wrapper {
   padding: 2em;
+}
+
+article .author.author-top > .wrapper {
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 article .author .w-80 .wrapper {
@@ -3211,7 +3227,7 @@ article .author p {
 }
 
 @media screen and (min-width: 801px){
-    .padding-sm{margin-top: 40px;}
+    .padding-sm{margin-top: 65px;}
     .wawancara-img a {
         position: relative;
         overflow: hidden;
@@ -3774,11 +3790,11 @@ article .author p {
   }
 
   article > figure figcaption {
-    display: none;  
+    display: none;
   }
 
   article > figure figcaption.active {
-    display: block;  
+    display: block;
   }
 
   article .text.w-50 .wrapper {
